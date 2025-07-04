@@ -327,8 +327,10 @@
     height: 100%;
   }
   .left-image{
-    height: 80%;
-    width: 20%;
+    height: 65%;
+    width: 13%;
+    /* height: 80%;
+    width: 20%; */
     margin-left: 0.5rem;
   }
   .left-image-content{

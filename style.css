@@ -19,7 +19,27 @@
     border-radius: 1rem;
     background-color: #000;
     margin:0.28rem;
+    overflow-y: auto;
   }
+
+.sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+
+ .sidebar::-webkit-scrollbar-track {
+  background: inherit; 
+}
+
+ .sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.276); 
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.368);
+} 
+
+
+
   .content{
     background-color: #121212;
     flex:1;
@@ -28,6 +48,22 @@
     margin: 0.28rem;
 
   }
+
+  .content::-webkit-scrollbar {
+  width: 12px;
+}
+
+ .content::-webkit-scrollbar-track {
+  background: inherit; 
+}
+
+ .content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.276); 
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.368);
+} 
   .music_player{
     position:fixed;
     bottom: 0px;
@@ -66,7 +102,6 @@
     background-color:#121212;
     margin-top: 0.5rem;
     /* padding: 0.5rem 0.75rem; */
-
   }
   .lib a{
     text-decoration: none;
@@ -84,7 +119,6 @@
     justify-content: space-between;
     padding: 0.5rem 1rem;
   }
-  /* hover */
   .lib-icons{
     width: 40px;
     height: 40px;
@@ -102,7 +136,6 @@
 
   }
 
-/* hover end */
   .icon{
     display: flex;
     justify-content: center;
@@ -162,7 +195,7 @@
 
   }
   .sticky-nav{
-    height: 3rem;
+    height: 1rem;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -211,8 +244,8 @@
   }
   .card{
     background-color: #2323239f;
-    width: 10.15rem;
-    height: 14.8rem;
+    width: 8.9rem;
+    height: 12.8rem;
     padding: 1.2rem;
     border-radius: 0.5rem;
     margin-left: 1.5rem;
@@ -220,16 +253,16 @@
     transform: 0.2s;
   }
   .card i{
-    font-size: 3.3rem;
+    font-size: 3rem;
     position: relative;
     z-index: 3; 
     bottom : 142px;
-    left: 102px;
+    left: 85px;
     transition: 0.15s linear;
     opacity: 0;
    }
    .card i:hover{
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     color: #38db71 !important;
    }
   .card:hover{
@@ -237,7 +270,7 @@
     cursor: pointer;
   }
   .card:hover i{
-    bottom : 154px;
+    bottom : 150px;
     opacity: 1;
   }
   .cards-container{
@@ -261,7 +294,7 @@
     text-decoration: solid white underline;
   }
   .information{
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin: 0.8rem 0 0.8rem 0;
     color: #ffffffca;
   }
@@ -283,6 +316,8 @@
     justify-items: space-between;
     align-items: center;
     background-color: black;
+    height: 3.9rem;
+    margin: 0;
   }
   .left{
     width: 30%;
@@ -310,69 +345,70 @@
   margin: 0 0.75rem 0 0;
   opacity: 0.7;
 }
-  .center{
-    width: 40%;
-   
-  }
-  .right{
-    width: 30%;
-    display: flex;
-    align-items: center;
-  }
-  .right i{
-    margin: 0 0.5rem;
-    font-size: 1.1rem;
-    opacity: 0.8;
-    transition: 0.15s linear;
-  }
-  .right i:hover{
-    opacity: 1;
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  .player-control-icon{
-    height: 1rem;
-    width: 1rem;
-    margin-right:1.75rem;
-    opacity: 0.7;
-  }
-  .player-control-icon:hover{
-    opacity: 1;
-  }
-  .player-control{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-  .playback{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .progress{
-    width: 70%;
-    appearance: none;
-    cursor: pointer;
-    height: 1.5rem;
-    background-color: transparent;
-  }
+.center{
+  width: 40%;
+  
+}
+.right{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.right i{
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  opacity: 0.8;
+  transition: 0.15s linear;
+}
+.right i:hover{
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.player-control-icon{
+  height: 0.8rem;
+  width: 0.8rem;
+  margin-right:1.75rem;
+  opacity: 0.7;
+}
+.player-control-icon:hover{
+  opacity: 1;
+}
+.player-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.playback{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress{
+  width: 70%;
+  appearance: none;
+  cursor: pointer;
+  height: 1.5rem;
+  background-color: transparent;
 
-  .progress::-webkit-slider-runnable-track {
-    background-color: #ddd;
-    border-radius: 100px;
-    height: 0.2rem;
-  }
+}
 
-  .progress::-webkit-slider-thumb {
-    appearance: none;
-    height: 1rem;
-    width: 1rem;
-    background-color: #1bd760;
-    border-radius: 50%; 
-    cursor: pointer;
-    margin-top:-6px ;
-  }
+.progress::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+
+.progress::-webkit-slider-thumb {
+  appearance: none;
+  height: 0.9rem;
+  width: 0.9rem;
+  background-color: #1bd760;
+  border-radius: 50%; 
+  cursor: pointer;
+  margin-top:-6px ;
+}
 
   h2:hover{
     text-decoration: solid white underline ;
